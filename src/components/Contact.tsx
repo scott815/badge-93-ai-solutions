@@ -1,9 +1,57 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    message: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: formData,
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Message sent!",
+        description: "We'll get back to you as soon as possible.",
+      });
+
+      setFormData({ name: "", email: "", company: "", message: "" });
+    } catch (error: any) {
+      console.error("Error sending message:", error);
+      toast({
+        title: "Error sending message",
+        description: "Please try again later or email us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-24 bg-secondary">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,7 +68,7 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div className="bg-card p-8 rounded-lg shadow-md border border-border">
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-card-foreground mb-2">
                     Name
@@ -30,6 +78,9 @@ const Contact = () => {
                     type="text" 
                     placeholder="Your name"
                     className="w-full"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
                   />
                 </div>
                 <div>
@@ -41,6 +92,9 @@ const Contact = () => {
                     type="email" 
                     placeholder="your.email@company.com"
                     className="w-full"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
                   />
                 </div>
                 <div>
@@ -52,6 +106,8 @@ const Contact = () => {
                     type="text" 
                     placeholder="Your company name"
                     className="w-full"
+                    value={formData.company}
+                    onChange={handleChange}
                   />
                 </div>
                 <div>
@@ -62,13 +118,17 @@ const Contact = () => {
                     id="message" 
                     placeholder="Tell us about your project..."
                     className="w-full min-h-[120px]"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
                   />
                 </div>
                 <Button 
                   type="submit" 
                   className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-lg py-6"
+                  disabled={isSubmitting}
                 >
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </div>
@@ -91,7 +151,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-card-foreground mb-1">Email</h4>
-                    <p className="text-muted-foreground">contact@badge93.ai</p>
+                    <p className="text-muted-foreground">scott@badge93.com</p>
                   </div>
                 </div>
 
