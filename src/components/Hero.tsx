@@ -5,7 +5,7 @@ import logo from "@/assets/badge93-logo.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-8">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -23,11 +23,11 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Logo */}
-          <div className="mb-8 animate-fade-in">
+          <div className="mb-6 animate-fade-in">
             <img 
               src={logo} 
               alt="Badge 93 AI Agency" 
-              className="w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 mx-auto drop-shadow-2xl"
+              className="w-36 h-36 sm:w-44 sm:h-44 lg:w-52 lg:h-52 mx-auto drop-shadow-2xl"
             />
           </div>
           
@@ -50,7 +50,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-cream/40 text-cream hover:bg-cream/10 hover:border-cream text-lg px-8 py-6 transition-all hover:scale-105"
+              className="border-slate-blue-dark bg-cream text-slate-blue-dark hover:bg-cream-dark text-lg px-8 py-6 transition-all hover:scale-105 font-semibold"
             >
               Learn More
             </Button>
