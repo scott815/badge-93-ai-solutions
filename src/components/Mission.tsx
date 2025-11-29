@@ -20,10 +20,10 @@ const Mission = () => {
   ];
 
   return (
-    <section id="mission" className="py-24 bg-secondary">
+    <section id="mission" className="py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-primary mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-blue font-display mb-6">
             Our Mission
           </h2>
           <p className="text-lg text-muted-foreground">
@@ -38,12 +38,12 @@ const Mission = () => {
             return (
               <div 
                 key={index}
-                className="bg-card p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-border"
+                className="bg-card p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-bronze/20"
               >
-                <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-6">
-                  <Icon className="h-7 w-7 text-accent" />
+                <div className="w-14 h-14 bg-rust-red/10 rounded-lg flex items-center justify-center mb-6">
+                  <Icon className="h-7 w-7 text-rust-red" />
                 </div>
-                <h3 className="text-xl font-bold text-card-foreground mb-3">
+                <h3 className="text-xl font-bold text-slate-blue mb-3">
                   {value.title}
                 </h3>
                 <p className="text-muted-foreground">

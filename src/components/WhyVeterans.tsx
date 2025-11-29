@@ -11,14 +11,17 @@ const WhyVeterans = () => {
   ];
 
   return (
-    <section id="why-veterans" className="py-24 bg-gradient-hero">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="why-veterans" className="py-24 bg-gradient-hero relative">
+      {/* Texture overlay */}
+      <div className="absolute inset-0 texture-overlay" />
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-primary-foreground mb-6">
+            <h2 className="text-4xl sm:text-5xl font-bold text-cream font-display mb-6">
               Why Veteran-Owned?
             </h2>
-            <p className="text-lg text-primary-foreground/80">
+            <p className="text-lg text-cream/80">
               Veterans bring unique strengths to business that translate directly into superior AI solutions.
             </p>
           </div>
@@ -27,18 +30,18 @@ const WhyVeterans = () => {
             {reasons.map((reason, index) => (
               <div 
                 key={index}
-                className="flex items-start gap-4 p-4 bg-primary-foreground/5 rounded-lg backdrop-blur-sm border border-primary-foreground/10 hover:bg-primary-foreground/10 transition-colors"
+                className="flex items-start gap-4 p-4 bg-cream/5 rounded-lg backdrop-blur-sm border border-cream/10 hover:bg-cream/10 transition-colors"
               >
-                <CheckCircle2 className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
-                <p className="text-primary-foreground/90 font-medium">
+                <CheckCircle2 className="h-6 w-6 text-rust-red flex-shrink-0 mt-1" />
+                <p className="text-cream/90 font-medium">
                   {reason}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 p-8 bg-primary-foreground/10 rounded-lg border border-primary-foreground/20 backdrop-blur-sm">
-            <p className="text-primary-foreground/90 text-center italic text-lg">
+          <div className="mt-12 p-8 bg-cream/10 rounded-lg border border-bronze/30 backdrop-blur-sm">
+            <p className="text-cream/90 text-center italic text-lg font-display">
               "Veterans don't just complete missions—they exceed expectations. That same dedication powers every AI solution we deliver."
             </p>
           </div>

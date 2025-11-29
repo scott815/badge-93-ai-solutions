@@ -53,11 +53,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-secondary">
+    <section id="contact" className="py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-primary mb-6">
+            <h2 className="text-4xl sm:text-5xl font-bold text-slate-blue font-display mb-6">
               Ready to Deploy?
             </h2>
             <p className="text-lg text-muted-foreground">
@@ -67,7 +67,7 @@ const Contact = () => {
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-card p-8 rounded-lg shadow-md border border-border">
+            <div className="bg-card p-8 rounded-lg shadow-md border border-bronze/20">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-card-foreground mb-2">
@@ -125,7 +125,7 @@ const Contact = () => {
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-lg py-6"
+                  className="w-full bg-rust-red hover:bg-rust-red-dark text-cream text-lg py-6 font-semibold"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
@@ -136,7 +136,7 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-bold text-primary mb-6">
+                <h3 className="text-2xl font-bold text-slate-blue font-display mb-6">
                   Get In Touch
                 </h3>
                 <p className="text-muted-foreground mb-8">
@@ -146,31 +146,31 @@ const Contact = () => {
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail className="h-6 w-6 text-accent" />
+                  <div className="w-12 h-12 bg-rust-red/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Mail className="h-6 w-6 text-rust-red" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-card-foreground mb-1">Email</h4>
+                    <h4 className="font-semibold text-slate-blue mb-1">Email</h4>
                     <p className="text-muted-foreground">scott@badge93.com</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="h-6 w-6 text-accent" />
+                  <div className="w-12 h-12 bg-rust-red/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Phone className="h-6 w-6 text-rust-red" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-card-foreground mb-1">Phone</h4>
+                    <h4 className="font-semibold text-slate-blue mb-1">Phone</h4>
                     <p className="text-muted-foreground">+1 (555) 093-9300</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="h-6 w-6 text-accent" />
+                  <div className="w-12 h-12 bg-rust-red/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MapPin className="h-6 w-6 text-rust-red" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-card-foreground mb-1">Location</h4>
+                    <h4 className="font-semibold text-slate-blue mb-1">Location</h4>
                     <p className="text-muted-foreground">Serving veteran-owned businesses nationwide</p>
                   </div>
                 </div>
