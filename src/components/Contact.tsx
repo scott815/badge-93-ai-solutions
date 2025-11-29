@@ -73,9 +73,9 @@ const Contact = () => {
                   <label htmlFor="name" className="block text-sm font-medium text-card-foreground mb-2">
                     Name
                   </label>
-                  <Input 
-                    id="name" 
-                    type="text" 
+                  <Input
+                    id="name"
+                    type="text"
                     placeholder="Your name"
                     className="w-full"
                     value={formData.name}
@@ -87,9 +87,9 @@ const Contact = () => {
                   <label htmlFor="email" className="block text-sm font-medium text-card-foreground mb-2">
                     Email
                   </label>
-                  <Input 
-                    id="email" 
-                    type="email" 
+                  <Input
+                    id="email"
+                    type="email"
                     placeholder="your.email@company.com"
                     className="w-full"
                     value={formData.email}
@@ -101,9 +101,9 @@ const Contact = () => {
                   <label htmlFor="company" className="block text-sm font-medium text-card-foreground mb-2">
                     Company
                   </label>
-                  <Input 
-                    id="company" 
-                    type="text" 
+                  <Input
+                    id="company"
+                    type="text"
                     placeholder="Your company name"
                     className="w-full"
                     value={formData.company}
@@ -114,8 +114,8 @@ const Contact = () => {
                   <label htmlFor="message" className="block text-sm font-medium text-card-foreground mb-2">
                     Message
                   </label>
-                  <Textarea 
-                    id="message" 
+                  <Textarea
+                    id="message"
                     placeholder="Tell us about your project..."
                     className="w-full min-h-[120px]"
                     value={formData.message}
@@ -123,8 +123,8 @@ const Contact = () => {
                     required
                   />
                 </div>
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
                   className="w-full bg-rust-red hover:bg-rust-red-dark text-cream text-lg py-6 font-semibold"
                   disabled={isSubmitting}
                 >
@@ -161,7 +161,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-blue mb-1">Phone</h4>
-                    <p className="text-muted-foreground">+1 (555) 093-9300</p>
+                    <p className="text-muted-foreground">623-326-0317</p>
                   </div>
                 </div>
 

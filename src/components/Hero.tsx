@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-import logo from "@/assets/badge93-logo.png";
+import logo from "@/assets/badge93-logo.webp";
 
 const Hero = () => {
   return (
