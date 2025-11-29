@@ -36,10 +36,10 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-background">
+    <section id="services" className="py-24 bg-secondary">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-primary mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-blue font-display mb-6">
             AI Solutions
           </h2>
           <p className="text-lg text-muted-foreground">
@@ -53,13 +53,13 @@ const Services = () => {
             return (
               <Card 
                 key={index}
-                className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border hover:border-accent/50"
+                className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-bronze/20 hover:border-rust-red/50 bg-card"
               >
                 <CardHeader>
-                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-                    <Icon className="h-6 w-6 text-accent" />
+                  <div className="w-12 h-12 bg-rust-red/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-rust-red/20 transition-colors">
+                    <Icon className="h-6 w-6 text-rust-red" />
                   </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
+                  <CardTitle className="text-xl text-slate-blue">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-muted-foreground">
