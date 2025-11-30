@@ -6,7 +6,7 @@ const PodcastCTA = () => {
     <section id="apply" className="py-24 bg-slate-blue-dark relative">
       {/* Texture overlay */}
       <div className="absolute inset-0 texture-overlay" />
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-cream font-display mb-4">
@@ -15,9 +15,9 @@ const PodcastCTA = () => {
           <p className="text-2xl text-bronze font-display mb-6">
             Expand Your Influence
           </p>
-          
+
           <p className="text-lg text-cream/80 mb-8">
-            We are actively booking guests who are ready to share their insights and amplify their 
+            We are actively booking guests who are ready to share their insights and amplify their
             brand's commitment to the veteran community.
           </p>
 
@@ -41,7 +41,7 @@ const PodcastCTA = () => {
               className="border-cream bg-cream text-slate-blue-dark hover:bg-cream-dark text-lg px-8 py-6 transition-all hover:scale-105 font-semibold"
               asChild
             >
-              <a href="#contact">
+              <a href="mailto:scott@badge93.com">
                 <Mail className="mr-2 h-5 w-5" />
                 Contact Scott Thompson
               </a>
