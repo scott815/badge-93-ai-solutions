@@ -1,21 +1,19 @@
-import PodcastHero from "@/components/podcast/PodcastHero";
-import AboutHost from "@/components/podcast/AboutHost";
-import PodcastMission from "@/components/podcast/PodcastMission";
-import PodcastSeries from "@/components/podcast/PodcastSeries";
-import PodcastCTA from "@/components/podcast/PodcastCTA";
-import PodcastContact from "@/components/podcast/PodcastContact";
-import PodcastFooter from "@/components/podcast/PodcastFooter";
+import Hero from "@/components/Hero";
+import Mission from "@/components/Mission";
+import Services from "@/components/Services";
+import WhyVeterans from "@/components/WhyVeterans";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <PodcastHero />
-      <AboutHost />
-      <PodcastMission />
-      <PodcastSeries />
-      <PodcastCTA />
-      <PodcastContact />
-      <PodcastFooter />
+      <Hero />
+      <Mission />
+      <Services />
+      <WhyVeterans />
+      <Contact />
+      <Footer />
     </div>
   );
 };
