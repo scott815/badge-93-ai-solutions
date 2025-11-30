@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
+import emailjs from "@emailjs/browser";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -28,11 +28,14 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const { data, error } = await supabase.functions.invoke("send-contact-email", {
-        body: formData,
-      });
+      const result = await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formData,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
 
-      if (error) throw error;
+      console.log(result.text);
 
       toast({
         title: "Message sent!",
