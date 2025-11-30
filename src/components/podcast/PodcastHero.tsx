@@ -4,10 +4,10 @@ import logo from "@/assets/badge93-logo.webp";
 
 const PodcastHero = () => {
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-slate-blue-dark">
       {/* Background gradient */}
       <div className="absolute inset-0 z-0 bg-gradient-hero" />
-      
+
       {/* Texture overlay */}
       <div className="absolute inset-0 z-[1] texture-overlay" />
 
@@ -26,8 +26,8 @@ const PodcastHero = () => {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-cream font-display mb-4 animate-fade-in">
             The Veteran Growth Edge
           </h1>
-          
-          <p className="text-xl sm:text-2xl lg:text-3xl text-bronze mb-6 font-display font-light animate-slide-up" style={{ animationDelay: '0.1s' }}>
+
+          <p className="text-xl sm:text-2xl lg:text-3xl text-cream mb-6 font-display font-medium drop-shadow-md animate-slide-up" style={{ animationDelay: '0.1s' }}>
             Insights from the Front Lines of Business
           </p>
 

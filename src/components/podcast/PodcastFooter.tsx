@@ -28,7 +28,7 @@ const PodcastFooter = () => {
           </div>
 
           {/* Social */}
-          <div className="text-cream">
+          {/* <div className="text-cream">
             <h4 className="font-bold mb-3">Follow Us</h4>
             <div className="flex gap-4">
               <a 
@@ -60,7 +60,7 @@ const PodcastFooter = () => {
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="border-t border-cream/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
