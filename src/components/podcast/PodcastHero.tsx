@@ -19,7 +19,7 @@ const PodcastHero = () => {
             <img
               src={logo}
               alt="Badge 93"
-              className="w-24 h-24 sm:w-28 sm:h-28 mx-auto drop-shadow-2xl"
+              className="w-36 h-36 sm:w-44 sm:h-44 lg:w-52 lg:h-52 mx-auto drop-shadow-2xl"
             />
           </div>
 
