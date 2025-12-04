@@ -31,9 +31,9 @@ const Hero = () => {
             />
           </div>
 
-          <p className="text-xl sm:text-2xl lg:text-3xl text-cream mb-4 font-display font-light animate-slide-up" style={{ animationDelay: '0.1s' }}>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-cream font-display mb-4 animate-fade-in">
             Mission-Driven AI Innovation
-          </p>
+          </h1>
 
           <p className="text-lg sm:text-xl text-cream/70 mb-12 max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: '0.2s' }}>
             Empowering veteran-owned businesses with cutting-edge artificial intelligence solutions.

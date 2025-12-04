@@ -1,22 +1,12 @@
-# Welcome to your Lovable project
+# Badge 93 AI Solutions
 
-## Project info
+## Project Overview
 
-**URL**: https://lovable.dev/projects/9191ac7c-f0d3-4521-981c-e22675c698d9
+Badge 93 delivers cutting-edge AI solutions designed for veteran-owned businesses. Mission-driven innovation meets military precision.
 
-## How can I edit this code?
+This repository contains the source code for the Badge 93 website and The Veteran Growth Edge podcast platform.
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/9191ac7c-f0d3-4521-981c-e22675c698d9) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Development
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -59,17 +49,14 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+## Deployment
 
-## How can I deploy this project?
+This project is deployed using Dokploy on a Hostinger VPS. The application is containerized using Docker with Nginx as the web server.
 
-Simply open [Lovable](https://lovable.dev/projects/9191ac7c-f0d3-4521-981c-e22675c698d9) and click on Share -> Publish.
+### Build
+```bash
+npm run build
+```
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
-
-
+### Production
+The production build is served via Nginx with proper SPA routing configuration.

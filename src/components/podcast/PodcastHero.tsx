@@ -4,7 +4,7 @@ import logo from "@/assets/badge93-logo.webp";
 
 const PodcastHero = () => {
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-slate-blue-dark">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-slate-blue-dark pt-8">
       {/* Background gradient */}
       <div className="absolute inset-0 z-0 bg-gradient-hero" />
 
