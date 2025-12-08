@@ -32,32 +32,21 @@ const Hero = () => {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-cream font-display mb-4 animate-fade-in">
-            Mission-Driven AI Innovation
+            Stop Losing Revenue to Manual Chaos.
           </h1>
 
-          <p className="text-lg sm:text-xl text-cream/70 mb-12 max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            Empowering veteran-owned businesses with cutting-edge artificial intelligence solutions.
-            Built on the values of service, precision, and excellence.
+          <p className="text-lg sm:text-xl text-cream/90 mb-12 max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            We guarantee a fully automated, 5-workflow business foundation in 90 days to unlock immediate scaling for veteran-owned service companies.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: '0.3s' }}>
+          <div className="flex justify-center animate-slide-up" style={{ animationDelay: '0.3s' }}>
             <Button
               size="lg"
               className="bg-rust-red hover:bg-rust-red-dark text-cream shadow-glow text-lg px-8 py-6 transition-all hover:scale-105 font-semibold"
               asChild
             >
-              <a href="#contact">
-                Get Started <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-slate-blue-dark bg-cream text-slate-blue-dark hover:bg-cream-dark text-lg px-8 py-6 transition-all hover:scale-105 font-semibold"
-              asChild
-            >
-              <a href="#mission">
-                Learn More
+              <a href="#contact-form">
+                Book Your 15-Minute Strategy Session <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
           </div>

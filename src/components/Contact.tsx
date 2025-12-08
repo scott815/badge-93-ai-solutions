@@ -12,8 +12,8 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    company: "",
-    message: "",
+    phone: "",
+    bottleneck: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -42,7 +42,7 @@ const Contact = () => {
         description: "We'll get back to you as soon as possible.",
       });
 
-      setFormData({ name: "", email: "", company: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", bottleneck: "" });
     } catch (error: any) {
       console.error("Error sending message:", error);
       toast({
@@ -56,15 +56,15 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-background">
+    <section id="contact-form" className="py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-slate-blue font-display mb-6">
-              Ready to Deploy?
+              Ready to Scale? Book Your Strategy Session.
             </h2>
             <p className="text-lg text-muted-foreground">
-              Let's discuss how Badge 93 can transform your business with AI solutions.
+              Let's identify the biggest operational bottleneck preventing your business from scaling.
             </p>
           </div>
 
@@ -101,27 +101,28 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-card-foreground mb-2">
-                    Company
+                  <label htmlFor="phone" className="block text-sm font-medium text-card-foreground mb-2">
+                    Phone
                   </label>
                   <Input
-                    id="company"
-                    type="text"
-                    placeholder="Your company name"
+                    id="phone"
+                    type="tel"
+                    placeholder="(555) 123-4567"
                     className="w-full"
-                    value={formData.company}
+                    value={formData.phone}
                     onChange={handleChange}
+                    required
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-card-foreground mb-2">
-                    Message
+                  <label htmlFor="bottleneck" className="block text-sm font-medium text-card-foreground mb-2">
+                    What is the single biggest operational bottleneck preventing your business from scaling right now?
                   </label>
                   <Textarea
-                    id="message"
-                    placeholder="Tell us about your project..."
+                    id="bottleneck"
+                    placeholder="Example: We lose leads because follow-up is manual and inconsistent..."
                     className="w-full min-h-[120px]"
-                    value={formData.message}
+                    value={formData.bottleneck}
                     onChange={handleChange}
                     required
                   />
@@ -131,7 +132,7 @@ const Contact = () => {
                   className="w-full bg-rust-red hover:bg-rust-red-dark text-cream text-lg py-6 font-semibold"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {isSubmitting ? "Sending..." : "Request Strategy Session"}
                 </Button>
               </form>
             </div>
